@@ -11,6 +11,7 @@
 
 <h4>These items are currently in your cart: </h4>
 <ul>
+<% #this cart is from the array that is set in the application controller %>
 <% cart.each do |product| %>
   <li><%= product %></li>
 <% end %>

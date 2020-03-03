@@ -1,0 +1,21 @@
+
+<h3>Add some items to your cart: </h3>
+
+<%= form_tag '/', action: 'add', method: 'post' do %>
+  <label>Product: </label>
+  <%= text_field_tag :product %>
+  <br>
+  <br>
+  <%= submit_tag 'add to cart' %>
+<% end %>
+
+<h4>These items are currently in your cart: </h4>
+<ul>
+<% #this cart is from the array that is set in the application controller %>
+<% cart.each do |product| %>
+  <li><%= product %></li>
+<% end %>
+</ul>
+
+  
+
